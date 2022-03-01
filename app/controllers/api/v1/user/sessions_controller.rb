@@ -1,4 +1,9 @@
 class Api::V1::User::SessionsController < ApplicationController
+
+  def sign_up
+    
+  end
+
   def sign_in
   end
 
@@ -6,6 +11,7 @@ class Api::V1::User::SessionsController < ApplicationController
   end
 
   def profile
+    render json: { success: "true", message: "This is your profile" }
   end 
-  
+
 end

@@ -11,6 +11,7 @@
 #  username               :text
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
+#  role_id                :bigint
 #
 # Indexes
 #
@@ -18,6 +19,7 @@
 #  index_users_on_reset_password_token  (reset_password_token) UNIQUE
 #
 class User < ApplicationRecord
+  belongs_to :role
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
